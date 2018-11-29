@@ -37,7 +37,7 @@ class Deck
 				@deck << Card.new(face.upcase, suit.upcase, rank)
 				rank += 1
 			end
-		end				
+		end
 	end
 
 	public
@@ -96,7 +96,7 @@ class Hand
 			end
 		else
 			false
-		end	
+		end
 	end
 
 	def hasFlush
@@ -140,11 +140,11 @@ class Hand
 					updateBestHand('Pair', i+1)
 					hasPair = true
 				end
-			when 3 
+			when 3
 				updateBestHand('Triples', i+1)
 				hasTrips = true
 				tripsCardRank = i+1
-			when 4 
+			when 4
 				updateBestHand('Four of a Kind', i+1)
 			end
 		end
@@ -227,7 +227,7 @@ class Fivecard
 			print("Bet ?".yellow)
 			amount = gets.chomp.to_i
 			if amount < 1
-				puts "Huh?" 
+				puts "Huh?"
 			elsif amount > 20
 				puts "House limit is $20"
 			elsif lowestMoney < amount
@@ -279,7 +279,7 @@ class Fivecard
 			puts "You're Broke... I Win!!!".light_red
 		end
 	end
-	
+
 end
 
 # Play Game
